@@ -1,5 +1,3 @@
--- USE OnlineBookStore;
-
  INSERT INTO Authors (Name, AuthorID, Country)
  VALUES
      ('J.K. Rowling', 11, 'United Kingdom'),

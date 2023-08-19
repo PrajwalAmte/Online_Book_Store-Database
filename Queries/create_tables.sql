@@ -1,3 +1,7 @@
+CREATE DATABASE OnlineBookStore;
+
+USE OnlineBookStore;
+
 CREATE TABLE IF NOT EXISTS Authors (
     Name VARCHAR(25),
     AuthorID INT,
