@@ -49,7 +49,7 @@ SELECT * FROM Books ORDER BY DOP DESC LIMIT 5;
 SELECT * FROM Books WHERE PublisherName = 'HarperCollins';
 
 -- Find customers from a specific city:
-SELECT * FROM Customer WHERE Address LIKE '%Lane%';
+SELECT * FROM Customer WHERE Address LIKE '%Maple%';
 
 -- Get the total number of orders placed by each customer:
 SELECT c.Name, COUNT(sc.OrderID) AS NumberOfOrders
@@ -58,7 +58,7 @@ LEFT JOIN ShoppingCart sc ON c.ID = sc.CustomerID
 GROUP BY c.Name;
 
 -- Get the details of a specific customer's order:
-SELECT c.Name AS CustomerName, b.BookName, sc.Quantity, b.Price, (sc.Quantity * b.Price) AS TotalPrice
+SELECT c.Name AS CustomerName, b.BookName, sc.Quantity, b.Price, ROUND((sc.Quantity * b.Price),2) AS TotalPrice
 FROM Customer c
 INNER JOIN ShoppingCart sc ON c.ID = sc.CustomerID
 INNER JOIN Books b ON sc.BookISBN = b.ISBN
@@ -86,7 +86,7 @@ HAVING SUM(Quantity) >= 3;
 SELECT
     MIN(Price) AS MinPrice,
     MAX(Price) AS MaxPrice,
-    AVG(Price) AS AvgPrice
+    ROUND(AVG(Price), 2) AS AvgPrice
 FROM Books;
 
 
