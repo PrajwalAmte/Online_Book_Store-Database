@@ -34,11 +34,11 @@ For detailed information about the structure of each table, refer to the [create
 
 ## Class Diagram
 
-[Class Diagram](diagrams/class_diagram.mwb)
+[Class Diagram](diagrams/class_diagram.png)
 
 ## ER Diagram
 
-[ER Diagram](diagrams/er_diagram.drawio)
+[ER Diagram](diagrams/er_diagram.png)
 
 ## Queries
 
